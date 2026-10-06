@@ -17,7 +17,7 @@ Route::get('/Inicio', function () {
 
 Route::get('/livros', function () {
     return view('livros.index');
-})->name('livros'); 
+})->name('livros');
 
 Route::get('/generos', function () {
     return view('Generos.index');
@@ -46,8 +46,6 @@ Route::get('/classificacao', function () {
 Route::get('/livros', function () {
     return view('Livros.index');
 })->name('livros');
-
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
