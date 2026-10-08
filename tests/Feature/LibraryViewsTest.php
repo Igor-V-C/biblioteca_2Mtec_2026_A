@@ -19,6 +19,9 @@ class LibraryViewsTest extends TestCase
         $pages = [
             '/inicio' => 'inicio',
             '/autores' => 'autores',
+            '/classificacao' => 'classificacao',
+            '/clientes' => 'clientes',
+            '/emprestimos' => 'emprestimos',
         ];
 
         foreach ($pages as $path => $heading) {

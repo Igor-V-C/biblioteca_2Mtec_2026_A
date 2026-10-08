@@ -19,6 +19,18 @@ Route::get('/autores', function () {
     return view('autores.index');
 })->name('autores');
 
+Route::get('/classificacao', function () {			
+    return view('classificacao.index');
+})->name('classificacao');
+
+Route::get('/clientes', function () {
+    return view('clientes.index');
+})->name('clientes');
+
+Route::get('/emprestimos', function () {
+    return view('emprestimos.index');
+})->name('emprestimos');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

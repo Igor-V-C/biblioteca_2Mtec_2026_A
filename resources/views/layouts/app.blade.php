@@ -38,6 +38,9 @@
                             @foreach ([
                                 'inicio' => 'Início',
                                 'autores' => 'Autores',
+                                'classificacao' => 'Classificação',
+                                'clientes' => 'Clientes',
+                                'emprestimos' => 'Empréstimos',
                             ] as $routeName => $label)
                                 <a
                                     href="{{ route($routeName) }}"
