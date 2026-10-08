@@ -19,7 +19,7 @@ Route::get('/autores', function () {
     return view('autores.index');
 })->name('autores');
 
-Route::get('/classificacao', function () {			
+Route::get('/classificacao', function () {
     return view('classificacao.index');
 })->name('classificacao');
 
