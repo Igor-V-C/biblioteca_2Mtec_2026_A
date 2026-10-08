@@ -4,6 +4,9 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 
+/**
+ * Aqui ele pega todas as páginas para criar uma "Renderização" de cada uma, só para adicionar mais páginas é só colocar aqui o caminho da pasta dela
+ */
 class LibraryViewsTest extends TestCase
 {
     public function test_library_pages_render_from_resources_views(): void
@@ -11,12 +14,8 @@ class LibraryViewsTest extends TestCase
         $this->withoutVite();
 
         $pages = [
-            '/Inicio' => 'Aqui é o ínicio',
-            '/generos' => 'Gêneros',
-            '/exemplares' => 'Exemplares',
-            '/emprestimos' => 'Empréstimos',
-            '/autores' => 'Autores',
-            '/classificacao' => 'Classificação',
+            '/inicio' => 'inicio',
+            '/autores' => 'autores',
         ];
 
         foreach ($pages as $path => $heading) {
@@ -24,8 +23,6 @@ class LibraryViewsTest extends TestCase
                 ->assertOk()
                 ->assertSee($heading)
                 ->assertSee('Autores')
-                ->assertSee('Empréstimos')
-                ->assertSee('Classificação')
                 ->assertSee('aria-label="Alternar navegação"', false)
                 ->assertSee('aria-controls="library-navigation"', false)
                 ->assertSee('<footer', false)

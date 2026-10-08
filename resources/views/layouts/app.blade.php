@@ -18,7 +18,7 @@
         <div class="flex min-h-screen flex-col bg-library-background text-library-text">
             @hasSection('content')
                 <nav x-data="{ open: false }" class="border-b border-library-border bg-library-surface" aria-label="Navegação principal">
-                    <div class="mx-auto flex max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8 md:hidden">
+                    <div class="mx-auto flex max-w-7xl items-center justify-start px-4 sm:px-6 lg:px-8 md:hidden">
                         <button
                             type="button"
                             @click="open = ! open"
@@ -34,15 +34,10 @@
                     </div>
 
                     <div id="library-navigation" x-cloak :class="open ? 'block' : 'hidden'" class="md:block">
-                        <div class="mx-auto flex max-w-7xl flex-col px-4 pb-2 sm:px-6 md:flex-row md:gap-4 md:overflow-visible md:px-8 md:pb-0 lg:px-8">
+                        <div class="mx-auto flex max-w-7xl flex-col px-4 pb-2 sm:px-6 md:flex-row md:gap-4 md:overflow-visible md:px-8 md:pb-0 lg:px-8 justify-center">
                             @foreach ([
                                 'inicio' => 'Início',
-                                'generos' => 'Gêneros',
-                                'exemplares' => 'Exemplares',
-                                'emprestimos' => 'Empréstimos',
                                 'autores' => 'Autores',
-                                'classificacao' => 'Classificação',
-                                'livros' => 'Livros',
                             ] as $routeName => $label)
                                 <a
                                     href="{{ route($routeName) }}"
