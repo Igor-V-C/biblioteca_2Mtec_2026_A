@@ -17,11 +17,14 @@ class LibraryViewsTest extends TestCase
         $this->withoutVite();
 
         $pages = [
-            '/inicio' => 'inicio',
-            '/autores' => 'autores',
-            '/classificacao' => 'classificacao',
-            '/clientes' => 'clientes',
-            '/emprestimos' => 'emprestimos',
+            '/inicio' => 'Início',
+            '/autores' => 'Autores',
+            '/classificacao' => 'Classificação',
+            '/clientes' => 'Clientes',
+            '/emprestimos' => 'Empréstimos',
+            '/exemplares' => 'Exemplares',
+            '/generos' => 'Gêneros',
+            '/livros' => 'Livros',
         ];
 
         foreach ($pages as $path => $heading) {

@@ -41,6 +41,10 @@
                                 'classificacao' => 'Classificação',
                                 'clientes' => 'Clientes',
                                 'emprestimos' => 'Empréstimos',
+                                'exemplares' => 'Exemplares',
+                                'generos' => 'Gêneros',
+                                'livros' => 'Livros',
+
                             ] as $routeName => $label)
                                 <a
                                     href="{{ route($routeName) }}"

@@ -31,6 +31,18 @@ Route::get('/emprestimos', function () {
     return view('emprestimos.index');
 })->name('emprestimos');
 
+Route::get('/exemplares', function () {
+    return view('exemplares.index');
+})->name('exemplares');
+
+Route::get('/generos', function () {
+    return view('generos.index');
+})->name('generos');
+
+Route::get('/livros', function () {
+    return view('livros.index');
+})->name('livros');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
