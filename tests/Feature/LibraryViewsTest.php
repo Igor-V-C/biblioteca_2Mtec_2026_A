@@ -9,6 +9,9 @@ use Tests\TestCase;
  */
 class LibraryViewsTest extends TestCase
 {
+    /**
+     * Testa se as páginas da biblioteca estão renderizando corretamente.
+     */
     public function test_library_pages_render_from_resources_views(): void
     {
         $this->withoutVite();
